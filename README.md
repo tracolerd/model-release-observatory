@@ -1,4 +1,6 @@
-# Model Release Observatory
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:101B2D,50:0369A1,100:111827&height=190&section=header&text=Model%20Release%20Observatory&fontSize=42&fontColor=F1F5F9&fontAlignY=38&animation=fadeIn&desc=Planned%20experiment%20tracking%2C%20model%20evaluation%20and%20release%20evidence&descAlignY=61&descSize=15" alt="Model Release Observatory animated project banner" width="100%" />
+</p>
 
 **Make model experiments, evaluations, and releases traceable.**
 
@@ -112,3 +114,4 @@ This project is independently developed and maintained by Nurul Faiyaz. AI-assis
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
