@@ -103,6 +103,12 @@ Do not commit licensed datasets, personal data, model credentials, or large priv
 
 This repository currently contains the project brief and MIT license. No benchmark, model training result, deployment, fine-tuning result, or drift-detection accuracy claim is available yet.
 
+## Author & Development
+
+**Project author and solo developer:** [Nurul Faiyaz](https://github.com/tracolerd).
+
+This project is independently developed and maintained by Nurul Faiyaz. AI-assisted tools may be used as part of the development workflow; the project author remains responsible for technical decisions, code review, validation, and maintenance.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
