@@ -1,0 +1,6 @@
+﻿# Project specific
+venv/
+__pycache__/
+.env
+mlruns/
+*.pkl
