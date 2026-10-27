@@ -1,0 +1,18 @@
+{
+    "scenario_no_shift": {
+        "feature": "mean radius",
+        "statistic": 0.039119107082292714,
+        "p_value": 0.9538235996111953,
+        "threshold": 0.05,
+        "drift_detected": false,
+        "limitation": "Univariate drift is a signal, not a definitive proof of model quality loss."
+    },
+    "scenario_synthetic_shift": {
+        "feature": "mean radius",
+        "statistic": 0.45547744581136496,
+        "p_value": 5.035384968234466e-31,
+        "threshold": 0.05,
+        "drift_detected": true,
+        "limitation": "Univariate drift is a signal, not a definitive proof of model quality loss."
+    }
+}
