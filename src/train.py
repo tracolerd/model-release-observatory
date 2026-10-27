@@ -16,26 +16,20 @@ def main():
     args = parser.parse_args()
     print(f"Starting run: {args.run_name}")
     X_train, X_test, y_train, y_test = get_train_test_split()
-    # Generate fingerprint
     fingerprint = get_data_fingerprint(X_train)
-    # Set MLflow Experiment
     mlflow.set_experiment("Breast_Cancer_Classification")
     with mlflow.start_run(run_name=args.run_name):
-        # Log data metadata
         mlflow.set_tag("dataset_fingerprint", fingerprint)
         mlflow.set_tag("dataset_shape", f"{X_train.shape}")
-        # Log hyperparameters
         mlflow.log_param("n_estimators", args.n_estimators)
         mlflow.log_param("max_depth", args.max_depth)
         mlflow.log_param("random_state", 42)
-        # Train Model
         model = RandomForestClassifier(
             n_estimators=args.n_estimators,
             max_depth=args.max_depth,
             random_state=42
         )
         model.fit(X_train, y_train)
-        # Evaluate Model
         y_pred = model.predict(X_test)
         y_proba = model.predict_proba(X_test)[:, 1]
         metrics = {
@@ -44,10 +38,13 @@ def main():
             "f1_score": float(f1_score(y_test, y_pred)),
             "roc_auc": float(roc_auc_score(y_test, y_proba))
         }
-        # Log Metrics
         mlflow.log_metrics(metrics)
-        # Log Model Artifact
-        mlflow.sklearn.log_model(model, "model_artifact")
+        # BUGFIX: Specify serialization_format to bypass skops UntrustedTypes exception
+        mlflow.sklearn.log_model(
+            sk_model=model, 
+            artifact_path="model_artifact",
+            serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_CLOUDPICKLE
+        )
         print(f"Metrics: F1={metrics['f1_score']:.4f}, Recall={metrics['recall']:.4f}")
         print("Model and metrics successfully logged to MLflow.\n")
 if __name__ == "__main__":
