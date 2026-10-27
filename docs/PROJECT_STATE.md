@@ -1,10 +1,9 @@
 ﻿# Project State: Model Release Observatory
-## Current Phase: Phase 1 - Local Baseline Training (Completed)
-- [x] Initial GitHub Repo Cloned
-- [x] Virtual Environment Setup
-- [x] Dependencies Pinned
-- [x] Data Loading & Split (Stratified, No Leakage)
+## Current Phase: Phase 2 - MLflow Tracking & Run Comparison (Completed)
 - [x] Baseline RandomForest Model Training
-- [x] Precision, Recall, F1, ROC-AUC Metrics Extracted
+- [x] MLflow Integration (Parameters, Metrics, Tags)
+- [x] Dataset Fingerprint Logging (MD5 Hash)
+- [x] Model Artifact Logging (.pkl via MLflow)
+- [x] Programmatic Run Comparison Script
 ## Next Milestone
-Phase 2: MLflow tracking, artifacts, and run comparison.
+Phase 3: Report generation and explicit release-state workflow.
