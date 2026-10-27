@@ -1,0 +1,10 @@
+{
+    "total_requests": 100,
+    "successful_requests": 100,
+    "latency_ms": {
+        "p50": 24.25,
+        "p90": 24.73,
+        "p99": 25.39,
+        "mean": 24.32
+    }
+}
