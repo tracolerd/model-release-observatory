@@ -334,3 +334,7 @@ Issues and focused pull requests are welcome. Changes to the evaluation policy, 
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+---
+
+<p align="center"><sub>Portfolio catalog · Project 11 of 22 · <a href="https://github.com/tracolerd">Nurul Faiyaz</a></sub></p>
